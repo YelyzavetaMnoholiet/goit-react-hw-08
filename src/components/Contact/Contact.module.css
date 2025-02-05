@@ -1,0 +1,88 @@
+.deletBtn {
+  background-color: rgb(229, 118, 26);
+  border: none;
+  cursor: pointer;
+
+  align-items: center;
+  margin: 10px;
+}
+
+.deletBtn:hover {
+  color: red;
+}
+
+.contactItem {
+  /* background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 10px 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in-out;
+  margin: 10px;
+}
+.contactText {
+  display: flex;
+  align-items: baseline;
+  list-style: none;
+  padding-left: 10px;
+}
+/* .contactText:hover {
+  background-color: #eaeaea;
+} */
+
+.contactIcon {
+  /* margin-right: 10px; */
+  font-size: 35px; /* Розмір іконки */
+  margin-right: 10px; /* Відступ між іконкою та текстом */
+  background: linear-gradient(
+    90deg,
+    #ff7e5f,
+    #feb47b,
+    #6a11cb,
+    #2575fc
+  ); /* Градієнт */
+  background-size: 300% 100%;
+  color: white; /* Колір іконки */
+  border-radius: 50%; /* Округлення для круглої форми */
+  padding: 8px; /* Відступ всередині іконки */
+  transition: transform 0.3s, background-position 0.3s;
+}
+
+.contactIcon:hover {
+  transform: scale(1.1); /* Збільшення при наведенні */
+  background-position: 100% 0; /* Анімація зміщення градієнта */
+}
+
+.contactName {
+  /* font-weight: bold;
+  font-size: 16px; */
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+}
+
+/* .contactName:hover {
+  background-color: #eaeaea;
+} */
+
+.contactNumber {
+  /* font-size: 14px;
+  color: #666; */
+  font-size: 1rem;
+  color: #555;
+  font-family: monospace;
+  text-align: right;
+  margin-left: 20px;
+}

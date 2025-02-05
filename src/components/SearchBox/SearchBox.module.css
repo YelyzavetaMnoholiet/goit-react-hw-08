@@ -1,0 +1,10 @@
+.searchBox {
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+input {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ddd;
+}

@@ -1,0 +1,40 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  list-style-type: none;
+}
+
+input {
+  padding: 8px;
+  margin: 5px 0;
+}
+
+button {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+  background-size: 300% 100%;
+  animation: gradientAnimation 5s infinite;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
