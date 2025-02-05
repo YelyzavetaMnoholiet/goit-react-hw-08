@@ -1,0 +1,22 @@
+h1 {
+  /* text-align: center;
+  color: #ef8811; */
+  background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+  background-size: 300% 100%;
+  animation: gradientAnimation 5s infinite;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

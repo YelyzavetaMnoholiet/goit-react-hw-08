@@ -5,7 +5,7 @@ import s from "./ContactList.module.css";
 import {
   selectFilteredContacts,
   selectIsLoading,
-} from "../../redux/contactsSlice";
+} from "../../redux/contacts/selector";
 
 const ContactList = () => {
   const contactFilter = useSelector(selectFilteredContacts);
