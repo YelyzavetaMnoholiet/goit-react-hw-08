@@ -12,7 +12,7 @@ input {
   margin: 5px 0;
 }
 
-button {
+.button {
   background: linear-gradient(90deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
   background-size: 300% 100%;
   animation: gradientAnimation 5s infinite;
@@ -26,11 +26,11 @@ button {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
+.button:hover {
   transform: scale(1.1);
 }
 
-button:active {
+.button:active {
   transform: scale(0.95);
 }
 

@@ -46,7 +46,9 @@ export default function ContactForm() {
         <Field id="number" name="number" type="tel"></Field>
         <ErrorMessage name="number" component="span" className={s.error} />
 
-        <button type="submit">Додати новий контакт</button>
+        <button className={s.button} type="submit">
+          Додати новий контакт
+        </button>
       </Form>
     </Formik>
   );

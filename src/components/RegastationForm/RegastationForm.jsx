@@ -1,19 +1,22 @@
 import { Field, Form, Formik } from "formik";
-import s from "./RegisterPage.module.css";
-import { Link } from "react-router-dom";
+import s from "./RegastationForm.module.css";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { registerThunk } from "../redux/auth/operations";
+import { registerThunk } from "../../redux/auth/operations";
 
-const RegisterPage = () => {
+const RegistrationForm = () => {
   const initialValues = {
     password: "",
     email: "",
     name: "",
   };
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleSubmit = (values, options) => {
     console.log(values);
-    dispatch(registerThunk(values));
+    dispatch(registerThunk(values))
+      .unwrap()
+      .then(() => navigate("/"));
     options.resetForm();
   };
   return (
@@ -33,7 +36,9 @@ const RegisterPage = () => {
             <span>Password:</span>
             <Field name="password" type="password"></Field>
           </label>
-          <button type="submit">Register</button>
+          <button className={s.button} type="submit">
+            Register
+          </button>
           <p>
             You already have account?{" "}
             <Link to="/Login" className={s.link}>
@@ -46,4 +51,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default RegistrationForm;
