@@ -3,8 +3,6 @@ import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "modern-normalize";
 
-import { fetchContacts } from "./redux/contacts/operations";
-
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import styles from "./App.module.css";
@@ -21,9 +19,6 @@ import PublicRout from "./components/PublicRout/PublicRout";
 const App = () => {
   const dispatch = useDispatch();
   const isRefresh = useSelector(selectisRefreshing);
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
 
   useEffect(() => {
     dispatch(refreshUserThunk());
