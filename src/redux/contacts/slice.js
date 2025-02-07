@@ -23,10 +23,11 @@ const slice = createSlice({
         state.contacts.items.push(action.payload);
       })
       .addCase(deleteContact.fulfilled, (state, action) => {
-        state.contacts.items = state.contacts.items
-          .filter((item) => item.id !== action.payload)
-          .addCase(logoutThunk.fulfilled, () => initialState);
+        state.contacts.items = state.contacts.items.filter(
+          (item) => item.id !== action.payload
+        );
       })
+      .addCase(logoutThunk.fulfilled, () => initialState)
       .addMatcher(
         isAnyOf(
           fetchContacts.pending,

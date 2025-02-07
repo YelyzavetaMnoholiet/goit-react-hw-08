@@ -18,7 +18,7 @@ export const addContact = createAsyncThunk(
   async (body, thunkAPI) => {
     try {
       const { data } = await goitAPI.post("/contacts", body);
-      thunkAPI.dispatch(fetchContacts());
+
       return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
